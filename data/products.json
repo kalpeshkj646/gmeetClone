@@ -1,0 +1,16 @@
+[
+  {
+    "id": "0.2826340208185636",
+    "title": "Elon Musk",
+    "imageUrl": "/imgs/book.jpg",
+    "description": "Biography of Elon Musk!!!",
+    "price": "30"
+  },
+  {
+    "id": "0.1379156480300905",
+    "title": "Into the Wild",
+    "imageUrl": "/imgs/book.jpg",
+    "description": "An adventures story!!!",
+    "price": "12"
+  }
+]
