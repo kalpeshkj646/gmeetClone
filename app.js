@@ -9,8 +9,25 @@ const app = express();
 
 // Setting Up Sequilize DB
 const sequelize = require("./util/database");
-const Product = require('./models/product');
-const User = require('./models/user');
+const Product = require("./models/product");
+const User = require("./models/user");
+const Cart = require("./models/cart");
+const CartItem = require("./models/cart-item");
+
+// setting up a user for all our routes
+// this is a temperory action which will be followed till we create a user authentication system
+// ṇow the major question is -> how?
+// What we do is, we set up a middleware for all the routes before a specific route is defined, such that whenever any route is hit our users login will be there at that time
+app.use((req, res, next) => {
+  User.findByPk(1)
+    .then((user) => {
+      req.user = user;
+      next();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 // setting Templating Engines
 app.set("view engine", "ejs");
@@ -26,7 +43,6 @@ app.set("views", "views");
 //   .catch((err) => {
 //     console.log(err);
 //   });
-
 
 // bodyparser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -45,18 +61,33 @@ app.use(errorController.get404);
 // Initialising Sequelize DB so that we can initialise all the db models automatically
 
 // Creating Associations in our different kinds of data models
-Product.belongsTo(User, {constraints: true, onDelete: 'CASCADE' });
+Product.belongsTo(User, { constraints: true, onDelete: "CASCADE" });
 User.hasMany(Product);
 
+User.hasOne(Cart);
+Cart.belongsTo(User);
+
+Cart.belongsToMany(Product, {through: CartItem});
+Product.belongsToMany(Cart, {through: CartItem});
 
 sequelize
-  .sync()
+  .sync({force: true})
+  // .sync()
   .then((result) => {
     // console.log(result);
+    return User.findByPk(1);
+  })
+  .then((user) => {
+    if (!user) {
+      return User.create({ email: "kj@gmail.com", password: "kj@646" });
+    }
+    return user;
+  })
+  .then((user) => {
+    // console.log(user);
     // starting server
     app.listen(3000);
   })
   .catch((err) => {
     console.log(err);
   });
-   
