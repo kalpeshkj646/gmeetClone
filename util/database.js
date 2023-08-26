@@ -5,7 +5,7 @@
 //     host: 'localhost',
 //     user: 'root',
 //     database: 'node_project',
-//     password: 'Kj@mysql#646'
+//     password: '*********'
 // });
 
 // module.exports = pool.promise();
@@ -13,7 +13,7 @@
 // ////////// Making connection using Sequelize
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("node_project", "root", "Kj@mysql#646", {
+const sequelize = new Sequelize("node_project", "root", "**********", {
     dialect: 'mysql',
     host: 'localhost'
 });

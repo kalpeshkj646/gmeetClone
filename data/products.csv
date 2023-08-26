@@ -1,0 +1,12 @@
+id,title,price,imageUrl,description,createdAt,updatedAt,userId
+1, Steve Jobs ,420, /imgs/jobs.jpg ,"Biography of Steve Jobs, a visionary who created Apple!",2023-08-26 17:53:58,2023-08-26 18:39:49,1
+5, Into the Wild ,499, /imgs/intothewild.jpg , A book about the adventures life of Chris McCandless ,2023-08-26 18:31:31,2023-08-26 18:40:06,1
+6, Meditations ,700, /imgs/meditations.jpg ," A self-help book by Marcus Aurelius, a Roman Emperor, which shows the learning of his life. ",2023-08-26 18:34:05,2023-08-26 18:40:14,1
+7,For Whom the Bell Tolls,560,/imgs/forwhomthebellstoll.jpg,One of the greatest books by Ernest Hemingway!,2023-08-26 21:43:14,2023-08-26 21:43:14,1
+8,The Four Agreements,320,/imgs/fouragreements.jpg,A Toltec Wisdom Book,2023-08-26 21:45:46,2023-08-26 21:45:46,1
+9,Atomic Habits,540,/imgs/atomichabits.jpg,"A great book about habits, and how we can be more disciplined.
+",2023-08-26 21:48:06,2023-08-26 21:48:06,1
+10,47 Laws of Power,469,/imgs/47.jpg,A thought-provoking and controversial book that explores the dynamics of power and human influence,2023-08-26 21:52:15,2023-08-26 21:52:15,1
+11,The Alchemist,330,/imgs/alchemist.jpg,The Alchemist is a novel that combines an atmosphere of medieval mysticism with the voice of the desert.,2023-08-26 21:54:21,2023-08-26 21:54:21,1
+12,The Great Gatsby,430,/imgs/gatsby.jpg,"Jay Gatsby, a self-made millionaire, and his pursuit of Daisy Buchanan, a wealthy young woman whom he loved in his youth.",2023-08-26 21:56:06,2023-08-26 21:56:06,1
+13,Elon Musk,770,/imgs/elonmusk.jpg,Biography of Elon Musk!,2023-08-26 21:58:47,2023-08-26 21:58:47,1
